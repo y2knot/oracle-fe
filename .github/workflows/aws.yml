@@ -1,6 +1,6 @@
 ###
 
-name: Update Oracle and Probability Data 
+name: Get AWS oracle data
 
 on:
   push:
