@@ -1,5 +1,5 @@
 import boto3
-import pandas 
+import pandas as pd
 import os
 from io import StringIO
 
