@@ -1,6 +1,6 @@
 ###
 
-name: Get AWS oracle data
+name: Get AWS oracle data 
 
 on:
   push:
