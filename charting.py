@@ -4,7 +4,7 @@ import plotly.graph_objs as go
 import plotly.io as pio
 CHAIN = 'arbitrum'
 # Read the CSV files and create a DataFrame for each token
-tokens = ['DAI', 'USDC', 'FRAX', 'USDT',  'MIM', 'BUSD', 'USDD', 'MAI']
+tokens = ['DAI', 'USDC', 'FRAX', 'USDT',  'MIM', 'BUSD', 'USDD', 'MAI', 'LUSD', 'TUSD']
 mainnet_tokens = ['DAI', 'USDC', 'USDT',  'MIM', 'BUSD']
 
 dfs = {}
