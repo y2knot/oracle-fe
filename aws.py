@@ -38,7 +38,7 @@ s3 = boto3.client(
 # with open("data/wbtc.csv", "wb") as data:
 #     s3.download_fileobj('knot-bucket', 'y2k/oracles/wbtc.csv', data)
 
-ticker_list = ['busd', 'dai', 'frax', 'mai', 'mim', 'usdc', 'usdt', 'wbtc', 'usdd']
+ticker_list = ['busd', 'dai', 'frax', 'mai', 'mim', 'usdc', 'usdt', 'wbtc', 'usdd', 'tusd', 'lusd']
 for ticker in ticker_list:
     obj = s3.get_object(Bucket='knot-bucket', Key=f'y2k/oracles/{ticker}.csv')
     data = obj['Body'].read().decode('utf-8')
