@@ -42,18 +42,15 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Build HTML Chart 
+    - name: Data Collector 
       run: |
         python charting.py
-
     - name: commit
       run: |
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
         git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/y2knot/oracle-fe.git
-        git pull --rebase origin main
         git add -A
         timestamp=$(date -u)
         git commit -m "Latest data: ${timestamp}" || exit 0
         git push
-
